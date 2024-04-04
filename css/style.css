@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #13111C;
+    color: white;
+    font-family: Verdana, Tahoma, system-ui, Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 2fr 6fr 1fr;
+    min-height: 100vh;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    place-items: center;
+    letter-spacing: 1px;
+    /* row-gap: 50px; */
+}
+
+#header{
+    grid-area: header;
+    .header__tittle h1{
+        /* margin-top: 60px; */
+        font-size: 60px;
+    }
+}
+
+
+#main{
+    grid-area: main;
+    width: 60%;
+    
+    .form__login{
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 18px;
+        legend{
+            padding-left: 30px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+.form__items{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+.form__items > label:hover{
+    color: #FEF08A;
+}
+.form__items > input{
+    background-color: rgba(240, 241, 233, 0.934);
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0px 0px 4px #fef08aa2 ;
+}
+
+.form__items > input:focus{
+    outline: none;
+    background-color: white;
+}
+.form__items a{
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 4px;
+    background-color: #83E9A8;
+    border: 2px solid #13111C;
+    color:#13111C;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.form__items a:hover{
+    background-color: #13111C;
+    color: white;
+    border: 2px solid white;
+
+}
+.registrar{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.registrar .foco{
+    color:#FDE03D;
+    font-family: Consolas,Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    font-size: 17px;
+}
+
+.registrar .foco:hover{
+    color: #83E9A8;
+}
+
+#footer{
+    grid-area: footer;
+    font-size: Tahoma,Verdana,Geneva;
+}
